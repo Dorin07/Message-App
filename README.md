@@ -1,3 +1,3 @@
-# message_app
+# Message-app
 
 A new Message app, very basics.
