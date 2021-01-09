@@ -1,6 +1,7 @@
 {
   "project_info": {
     "project_number": "524222151341",
+    "firebase_url": "https://messageapp-aa467-default-rtdb.firebaseio.com",
     "project_id": "messageapp-aa467",
     "storage_bucket": "messageapp-aa467.appspot.com"
   },
