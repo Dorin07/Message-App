@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mess_app/homePage/homepage.dart';
@@ -34,10 +32,8 @@ class _BodyState extends State<Body> {
   void click() {
     signInWithGoogle().then((user) => {
           this.user = user,
-          Navigator.push(
-              context,
-              MaterialPageRoute(
-                  builder: (context) => MyHomePage(user.displayName)))
+          Navigator.push(context,
+              MaterialPageRoute(builder: (context) => MyHomePage(user)))
         });
   }
 
