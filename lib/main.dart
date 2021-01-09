@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mess_app/loginPage/login.dart';
+import 'package:mess_app/login.dart';
 
 void main() {
   runApp(MyApp());

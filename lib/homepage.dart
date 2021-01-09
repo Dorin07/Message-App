@@ -1,9 +1,9 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:mess_app/homePage/database.dart';
-import 'package:mess_app/homePage/post.dart';
-import 'package:mess_app/homePage/postList.dart';
-import 'package:mess_app/homePage/textInputWidget.dart';
+import 'package:mess_app/database.dart';
+import 'package:mess_app/post.dart';
+import 'package:mess_app/postList.dart';
+import 'package:mess_app/textInputWidget.dart';
 
 class MyHomePage extends StatefulWidget {
   final FirebaseUser user;
@@ -23,6 +23,20 @@ class _MyHomePageState extends State<MyHomePage> {
     this.setState(() {
       posts.add(post);
     });
+  }
+
+  void updatePosts() {
+    getAllPosts().then((posts) => {
+          this.setState(() {
+            this.posts = posts;
+          })
+        });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    updatePosts();
   }
 
   @override
